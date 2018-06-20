@@ -26,6 +26,8 @@ import {
   LivejournalShareButton,
   MailruShareButton,
   ViberShareButton,
+    HatenaShareButton,
+    LineShareButton,
 
   FacebookIcon,
   TwitterIcon,
@@ -41,7 +43,7 @@ import {
   MailruIcon,
   EmailIcon,
   LivejournalIcon,
-  ViberIcon,
+  ViberIcon
 } from 'react-share';
 
 import './Demo.css';
@@ -259,17 +261,35 @@ class Demo extends Component {
               round />
           </EmailShareButton>
         </div>
-        <div className="Demo__some-network">
-          <ViberShareButton
-            url={shareUrl}
-            title={title}
-            body="body"
-            className="Demo__some-network__share-button">
-            <ViberIcon
-              size={32}
-              round />
-          </ViberShareButton>
-        </div>
+          <div className="Demo__some-network">
+              <ViberShareButton
+                  url={shareUrl}
+                  title={title}
+                  body="body"
+                  className="Demo__some-network__share-button">
+                  <ViberIcon
+                      size={32}
+                      round />
+              </ViberShareButton>
+          </div>
+          <div className="Demo__some-network">
+              <HatenaShareButton
+                  url={shareUrl}
+                  title={title}
+                  body="body"
+                  className="Demo__some-network__share-button">
+                  Hatena Share
+              </HatenaShareButton>
+          </div>
+          <div className="Demo__some-network">
+              <LineShareButton
+                  url={shareUrl}
+                  title={title}
+                  body="body"
+                  className="Demo__some-network__share-button">
+                  Line Share
+              </LineShareButton>
+          </div>
       </div>
     );
   }
